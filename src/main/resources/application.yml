@@ -1,0 +1,19 @@
+server:
+  port: 7071
+  
+  
+#security:
+#  oauth2:
+#    client:
+#      client-id: client-app-1
+#      client-secret: client-secret-1
+#      scope:
+#      - read
+#      - write
+#      - trust
+#      authorized-grant-types:
+#      - password
+      
+      
+      
+      

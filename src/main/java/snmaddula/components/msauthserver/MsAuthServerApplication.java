@@ -2,7 +2,7 @@ package snmaddula.components.msauthserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.security.config.annotation.authentication.configuration.EnableGlobalAuthentication;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 
 /**
  * OAuth2 Authorization Server Application.
@@ -11,7 +11,7 @@ import org.springframework.security.config.annotation.authentication.configurati
  *
  */
 @SpringBootApplication
-@EnableGlobalAuthentication
+@EnableAuthorizationServer
 public class MsAuthServerApplication {
 
 	public static void main(String[] args) {

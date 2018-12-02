@@ -17,17 +17,22 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 
 	@Autowired
-	private AuthenticationManager authManager;
+	private AuthenticationManager authenticationManager;
 
 	@Override
 	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-		endpoints.authenticationManager(authManager);
+		endpoints.authenticationManager(authenticationManager);
 	}
 
 	@Override
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-		clients.inMemory().withClient("ms-app").secret("secret").authorizedGrantTypes("password")
-				.scopes("read,write,trust");
+		clients
+			.inMemory()
+				.withClient("client-app-1")
+					.secret("{noop}client-secret-1")
+					.authorizedGrantTypes("password")
+					.scopes("read,write,trust");
+		
 	}
 
 }
